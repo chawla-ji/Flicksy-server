@@ -7,9 +7,11 @@ const userRouter = require("./routers/userRouter");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const path = require("path");
 const cloudinary = require("cloudinary").v2;
 
-dotenv.config("./.env");
+dotenv.config({path:path.resolve(__dirname,  "./.env")});
+
 
 // Configuration
 cloudinary.config({
